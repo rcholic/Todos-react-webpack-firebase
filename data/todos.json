@@ -1,0 +1,34 @@
+{
+    "todos": {
+        "at_home": {
+            "0": {
+                "todo": "Finish laundry",
+                "completed": false
+            },
+            "1": {
+                "todo": "Shop groceries",
+                "completed": false
+            }
+        },
+
+        "at_work": {
+            "0": {
+                "todo": "Project progress reporting",
+                "completed": false
+            },
+            "1": {
+                "todo": "Finish Jira ticket #171",
+                "completed": false
+            }
+        }
+    },
+
+    "categories": {
+        "at_work": {
+            "name": "At Work"
+        },
+        "at_home": {
+            "name": "At Home"
+        }
+    }
+}

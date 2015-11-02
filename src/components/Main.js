@@ -18,6 +18,8 @@ const AppBar = require('material-ui/lib/app-bar');
 const React = require('react');
 const RaisedButton = require('material-ui/lib/raised-button');
 const Dialog = require('material-ui/lib/dialog');
+const Login = require('./LoginComponent');
+const CategoryList = require('./CategoryListComponent');
 // const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const ThemeManager = Styles.ThemeManager;
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
@@ -52,6 +54,8 @@ const Main = React.createClass({
 
   render() {
 
+    var view = <Login />;
+
     let containerStyle = {
       textAlign: 'center',
       paddingTop: '200px',
@@ -64,6 +68,7 @@ const Main = React.createClass({
     return (
       <div>
       <AppBar title="Awesome Todo App" />
+      <Login />
       <div style={containerStyle}>
         <Dialog
           title="Super Secret Password"
@@ -81,8 +86,9 @@ const Main = React.createClass({
           margin: '30px auto',
           padding: 30
         }}>
-          Hello card! 
+          Hello card!
         </Card>
+        <CategoryList />
 
       </div>
       </div>
