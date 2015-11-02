@@ -2,6 +2,6 @@
 
 References:
 
--[generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
+- [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
 
--[Alt](https://github.com/goatslacker/alt)
+- [Alt](https://github.com/goatslacker/alt)
