@@ -49,7 +49,7 @@ const Main = React.createClass({
 
     return (
       <div>
-      <AppBar title="awesome react" />
+      <AppBar title="Awesome Todo App" />
       <div style={containerStyle}>
         <Dialog
           title="Super Secret Password"
