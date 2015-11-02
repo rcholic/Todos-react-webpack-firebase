@@ -1,0 +1,6 @@
+{
+  "generator-react-webpack": {
+    "appName": "reactTest2",
+    "style": "css"
+  }
+}
