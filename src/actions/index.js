@@ -6,6 +6,7 @@ class Actions {
         this.generateActions(
             'categoriesReceived',
             'categoriesFailed',
+            'categoryOpenned',
             'todosLoading',
             'todosReceived',
             'todosFailed'

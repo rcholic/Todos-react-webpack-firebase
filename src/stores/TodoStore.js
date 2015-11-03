@@ -2,9 +2,6 @@
 
 const alt = require('../alt');
 const Actions = require('../actions');
-// const {decorate, bind, datasource} = require('alt/utils/decorators');
-// const CategorySource = require('../sources/CategorySource');
-// const _ = require('lodash');
 import {decorate, bind, datasource} from 'alt/utils/decorators';
 import CategorySource from '../sources/CategorySource';
 import _ from 'lodash';
@@ -59,6 +56,25 @@ class TodoStore {
     @bind(Actions.login)
     login(user) {
         this.setState({user: user});
+    }
+
+    @bind(Actions.categoryOpenned)
+    categoryOpenned(selectedCategory) {
+        _(this.state.categories)
+        .values()
+        .each((category) => {
+            category.selected = false;
+        })
+        .value();
+
+        console.log('triggered categoryOpenned!');
+        selectedCategory.selected = true;
+        this.setState({
+            selectedCategory,
+            categories: this.state.categories,
+            todosDirty: true
+        });
+        // setTimeout(this.getInstance().getTodos, 100);
     }
 }
 
