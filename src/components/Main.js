@@ -19,10 +19,10 @@ const React = require('react');
 const RaisedButton = require('material-ui/lib/raised-button');
 const Dialog = require('material-ui/lib/dialog');
 const Login = require('./LoginComponent');
-const CategoryList = require('./CategoryListComponent');
-// const ThemeManager = require('material-ui/lib/styles/theme-manager');
+// const CategoryList = require('./CategoryListComponent');
+
 const ThemeManager = Styles.ThemeManager;
-const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
+// const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
 
 
