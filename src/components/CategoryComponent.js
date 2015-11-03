@@ -3,9 +3,10 @@
 require('styles//Category.css');
 
 import mui from 'material-ui';
-import ListItem from 'material-ui';
+//import ListItem from 'material-ui';
 import React from 'react';
 import Actions from '../actions';
+var {ListItem} = mui;
 
 class CategoryComponent extends React.Component {
     constructor(props) {
@@ -16,7 +17,20 @@ class CategoryComponent extends React.Component {
         Actions.categoryOpenned(this.props.category);
     }
 
-
+    render() {
+        let style = {};
+        if (this.props.category.selected) {
+            style.backgroundColor = '#f0f0f0';
+        }
+        return (
+            <ListItem
+            onClick={this.onClick.bind(this)}
+            style={style}
+            key={this.props.category.key}
+            >{this.props.category.name}</ListItem>
+        );
+    }
+    /*
   render() {
       let style = {};
       if (this.props.category.selected) {
@@ -29,10 +43,11 @@ class CategoryComponent extends React.Component {
             {this.props.category.name}</ListItem>
       );
   }
+  */
 
 }
 
-CategoryComponent.displayName = 'CategoryComponent';
+// CategoryComponent.displayName = 'CategoryComponent';
 
 // Uncomment properties you need
 // CategoryComponent.propTypes = {};

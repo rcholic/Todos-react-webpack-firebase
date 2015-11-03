@@ -49,7 +49,7 @@ class CategoryListComponent extends React.Component {
           let category = this.props.categories[k];
           category.key = k;
           return (
-            <Category category={category} />
+            <Category key={k} category={category} />
           );
         })
         .value();
