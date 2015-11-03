@@ -1,14 +1,14 @@
 'use strict';
 
-const React = require('react');
-const Category = require('./CategoryComponent');
-const mui = require('material-ui');
+import {Card, CircularProgress, List, mui} from 'material-ui';
+import React from 'react';
+import Category from './CategoryComponent';
 import connectToStores from 'alt/utils/connectToStores';
-// const connectToStore = require('alt/utils/connectToStore');
-const TodoStore = require('../stores/TodoStore');
+import TodoStore from '../stores/TodoStore';
 
 require('styles//CategoryList.css');
 
+@connectToStores
 class CategoryListComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -24,30 +24,30 @@ class CategoryListComponent extends React.Component {
     }
 
   render() {
-      if(!this.props.categories){
-        return (
-          <Card style={{
-            flexGrow: 1
-          }}>
-            <CircularProgress
+      if (!this.props.categories) {
+          return (
+              <Card style={{
+                  flexGrow: 1
+              }}>
+              <CircularProgress
               mode="indeterminate"
               style={{
-                paddingTop: '20px',
-                paddingBottom: '20px',
-                margin: '0 auto',
-                display: 'block',
-                width: '60px'
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  margin: '0 auto',
+                  display: 'block',
+                  width: '60px'
               }}
-            />
-          </Card>
-        );
+              />
+              </Card>
+          );
       }
-
 
       var categoryNodes = _(this.props.categories)
         .keys()
         .map((k)=> {
           let category = this.props.categories[k];
+          category.key = k;
           return (
             <Category category={category} />
           );
@@ -59,14 +59,14 @@ class CategoryListComponent extends React.Component {
           flexGrow: 1
         }}>
           <List>
-            {channelNodes}
+            {categoryNodes}
           </List>
         </Card>
       );
   }
 }
 
-CategoryListComponent.displayName = 'CategoryListComponent';
+// CategoryListComponent.displayName = 'CategoryListComponent';
 
 // Uncomment properties you need
 // CategoryListComponent.propTypes = {};

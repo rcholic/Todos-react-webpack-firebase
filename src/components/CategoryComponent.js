@@ -2,11 +2,10 @@
 
 require('styles//Category.css');
 
-const React = require('react');
-const mui = require('material-ui');
-const Actions = require('../actions');
-
-const {ListItem} = mui;
+import mui from 'material-ui';
+import ListItem from 'material-ui';
+import React from 'react';
+import Actions from '../actions';
 
 class CategoryComponent extends React.Component {
     constructor(props) {
@@ -30,7 +29,7 @@ class CategoryComponent extends React.Component {
             {this.props.category.name}</ListItem>
       );
   }
-  
+
 }
 
 CategoryComponent.displayName = 'CategoryComponent';
